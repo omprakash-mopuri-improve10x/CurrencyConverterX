@@ -10,7 +10,6 @@ import android.widget.ArrayAdapter;
 import com.omprakash.currencyconverterx.databinding.ActivityCurrencyConvertorBinding;
 
 import java.util.ArrayList;
-import java.util.Currency;
 
 public class CurrencyConvertorActivity extends AppCompatActivity {
 
@@ -23,7 +22,8 @@ public class CurrencyConvertorActivity extends AppCompatActivity {
         binding = ActivityCurrencyConvertorBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         setCurrencies();
-        setUpSpinner();
+        setupFromSpinner();
+        setupToSpinner();
     }
 
     private void setCurrencies() {
@@ -62,10 +62,25 @@ public class CurrencyConvertorActivity extends AppCompatActivity {
         currencies.add("South African rand (ZAR)");
     }
 
-    private void setUpSpinner() {
+    private void setupFromSpinner() {
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, currencies);
         binding.fromSp.setAdapter(arrayAdapter);
         binding.fromSp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+    }
+
+    private void setupToSpinner() {
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, currencies);
+        binding.toSp.setAdapter(arrayAdapter);
+        binding.toSp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
