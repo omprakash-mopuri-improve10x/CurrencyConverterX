@@ -1,9 +1,10 @@
-package com.omprakash.currencyconverterx;
+package com.omprakash.currencyconverterx.network;
 
-import com.omprakash.currencyconverterx.Currency;
+import com.omprakash.currencyconverterx.model.Currency;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Query;
 
 public interface CurrencyService {
 

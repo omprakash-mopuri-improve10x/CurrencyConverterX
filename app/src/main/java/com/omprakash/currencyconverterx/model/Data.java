@@ -1,8 +1,8 @@
-package com.omprakash.currencyconverterx;
+package com.omprakash.currencyconverterx.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Currency {
+public class Data {
 
     @SerializedName("AUD")
     private Double aud;
@@ -71,4 +71,3 @@ public class Currency {
     @SerializedName("ZAR")
     private Double zar;
 }
-

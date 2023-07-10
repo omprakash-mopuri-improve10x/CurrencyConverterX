@@ -5,6 +5,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 import com.google.gson.Gson;
+import com.omprakash.currencyconverterx.model.Currency;
+import com.omprakash.currencyconverterx.network.CurrencyApi;
+import com.omprakash.currencyconverterx.network.CurrencyService;
 
 import java.io.IOException;
 

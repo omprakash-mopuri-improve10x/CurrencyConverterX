@@ -1,4 +1,4 @@
-package com.omprakash.currencyconverterx;
+package com.omprakash.currencyconverterx.network;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
